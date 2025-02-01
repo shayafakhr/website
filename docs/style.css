@@ -1,0 +1,374 @@
+*{  
+    margin:0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+    box-sizing: border-box;
+}
+body{
+   /* background: url("images/me2.jpg") no-repeat;*/
+    background-position: center;
+    background-size: contain;
+    color: #ffffff; 
+    background-attachment: fixed;
+    background-color: black;
+
+}
+#header{
+    width: 100%;
+    height: 100vh;
+   
+}
+#logo{ 
+    width: 140px; 
+    height: 100px;
+}
+
+
+
+.container {
+    padding: 10px 10%;
+}
+nav{
+    display: flex;
+    align-items: center; 
+    justify-content:space-between;
+    flex-wrap: wrap;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a{
+    color: white; 
+    text-decoration: none; 
+    font-size: 18px;
+    position: relative;
+    display: inline-block; /* Ensure the box effect applies */
+    padding: 10px 20px; /* Adjust padding as needed */
+    background: #6cb57d; /* Green background color */
+    border-radius: 5px; /* Optional: rounded corners */
+    transition: background 0.3s, color 0.3s; /* Smooth transition for hover effect */
+
+}
+
+nav ul li a::after{
+    content: '';
+    width: 0; /* Initially no underline */
+    height: 3px; 
+    background: #0f220d; /* Underline color */
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s; /* Smooth transition for underline effect */
+}
+nav ul li a:hover::after {
+    width: 100%; /* Full width on hover */
+}
+
+nav ul li a:hover {
+    background: #356541; /* Darker green background on hover */
+    color: #ffffff; /* Optional: change text color on hover */
+}
+.header-text{ 
+    margin: 20%; 
+    font-size: 30px; 
+}
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+
+
+}
+.header-text h1 span{
+    color:#8eab79;
+}
+
+/*about*/
+
+#about {
+    padding: 80 px 0px; 
+    color:#242f26; 
+
+}
+.row{ 
+    display:flex; 
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis: 35%; 
+
+}
+.about-col-1 img{
+    width:100%;
+    border-radius: 15%;
+
+}
+.about-col-2{
+    flex-basis: 60%;
+
+}
+.sub-title{ 
+    font-size: 60px; 
+    font-weight: 600;
+    color:#f6fcf5
+}
+.tab-titles {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tab-links {
+    padding: 10px 20px;
+    margin: 0 15px; /* Increased horizontal space */
+    cursor: pointer;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    text-align: center;
+    font-weight: bold;
+}
+
+.tab-links.active {
+    background-color: #28a745; /* Green background for the active tab */
+    color: white; /* White text for the active tab */
+    transform: scale(1.1); /* Slightly enlarge the active tab */
+}
+
+.tab-links:hover {
+    background-color: #d4edda; /* Light green background on hover */
+}
+
+
+
+.tab-panel {
+    display: none; /* Hide all tab panels by default */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 300px;
+    text-align: center;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.tab-panel.active {
+    display: block; /* Show the active tab panel */
+    opacity: 1;
+    transform: scale(1.05); /* Slightly enlarge the active tab panel */
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+    
+}
+.tab-contents ul li span{
+    color:#6cb57d; 
+    font-size: 14px;
+
+}
+.tab-contents{
+    display: none;
+
+}
+.tab-contents.active-tab{
+    display: block;
+
+}
+
+/*services*/
+
+#services{
+    padding: 30px 0; 
+
+}
+.services-list{ 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.services-list div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius:10px;
+    transition: background 0.5s, transform 0.5s;
+}
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.services-list div a{
+    text-decoration: none;
+    color: #fff;
+    font-size:12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.services-list div:hover{
+    background:rgb(92, 207, 69);
+    transform: translateY(-10px);
+
+}
+/*portfolio*/
+#portfolio {
+    padding: 50px 0;
+}
+.sub-title {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #ffffff; /* Use the green color from your current palette */
+    margin-bottom: 40px;
+}
+
+.work-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.work {
+    background-color: #262626; /* Match the service box color for consistency */
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    margin-bottom: 20px;
+    transition: background 0.3s, transform 0.3s;
+    color: #fff; /* White text for visibility */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Slight shadow for depth */
+}
+
+.work:hover {
+    background-color: #6cb57d; /* Change to the green color on hover */
+    transform: translateY(-10px); /* Subtle lift on hover */
+}
+
+.work h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #fff; /* Keep heading color white */
+}
+
+.work p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #d4edda; /* Light green text for descriptions */
+}
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #33ff00;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color : white; 
+    transition: background 0.5s;
+}
+.btn:hover{
+    background-color: #33ff00;
+    
+
+}
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%; 
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.btn.btn2{
+    display: inline-block;
+    background:rgb(92, 207, 69); 
+}
+.contact-right form{
+    width: 100%
+}
+form input, form textarea{
+    width: 100%; 
+    border: 0; 
+    outline: none; 
+    background: #525e55;
+    padding: 15px; 
+    margin: 15px 0;
+    color:#fff;
+    font-size: 18px; 
+    border-radius: 6px;
+}
+form btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor:pointer;
+
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #356541;
+    font-weight: 300;
+    margin-top: 20px;
+}
+/* css for small scree*/
+
+@media only screen and (max-width: 600px){
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+    nav {
+        flex-direction: column; /* Stack elements vertically */
+    }
+
+    #menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 30px;
+        color: white;
+        margin-right: 20px;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    nav ul li a {
+        display: block;
+        width: 100%;
+        background: #6cb57d;
+        color: white;
+        text-align: center;
+    }
+
+    nav ul li a:hover {
+        background: #356541;
+    }
+
+    #logo {
+        display: none; /* Hide the logo on mobile */
+    }
+}
