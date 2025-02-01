@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<html lang ="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>personal portfolio website</title>
+
+
+</head>
+
+
+ <body>
+<div id="header">
+    <div class="container">
+        <nav>
+           <img src="images/logo.jpg" alt="Logo" id="logo">
+            <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Front-End designer</p>
+            <h1> Hi, I'm <span>Shaya Fakhrabadi</span><br>from Simon Fraser University.</h1> 
+        </div>
+    </div>
+      
+</div>
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/me2.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>My name is Shaya Fakhrabadi, and I am a 19-year-old second-year engineering student at Simon Fraser University (SFU).
+                    <br> I have a deep passion for both software design and coding, as well as hardware design, particularly in the realm of robotics.
+                    <br> I created this website to showcase my personal achievements and projects, providing a platform where you can explore and enjoy the work I've done.
+                    <br> Through this site, I aim to share my journey and contributions in the fields of technology and engineering.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('Projects')">Projects</p>
+                    <p class="tab-links" onclick="opentab('Experiences')">Experiences</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Programming Language</span><br> C++, HTML, CSS, Java Script, MATLAB</li>
+                        <li><span>Web Development</span><br> HTML, CSS, Java Scrip, Front-End developer</li>
+                        <li><span>Software Tools</span><br> Visiual Studio, Eclips</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Projects">
+                    <ul>
+                        <li><span>DCT Quantization</span><br> Introduction to Engineering Analysis</li>
+                        <li><span>Debug Fibonacci Number Generator</span><br>Introduction to Software Development for Engineers</li>
+                        <li><span>Code Optimization and Minimization Byte Size</span><br>Introduction to Software Development for Engineers</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Experiences">
+                    <ul>
+                        <li><span>Fresh st. Market</span><br> Cashier <br> September 2023-present</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="services">
+   <div class="container">
+     <h1 class="sub-title">My Services</h1>
+      <div class="services-list">
+        <div>
+        <h2>Front-End Developer</h2>
+        <p>Developing front-end website using HTML, css, Java script. Desiging 
+            the way you like and with different types of categories</p>
+        <a href="#">Learn more</a>
+        <br>
+        </div>
+        <div>
+        <h2>Software Development</h2>
+        <p>Developing application and software designs with the use of VM ware virtual machine.</p>
+        <a href="#">Learn more</a>
+        </div>
+    
+     </div>
+   </div>
+</div>
+
+<!--portfolio--> 
+<div id="portfolio">
+<div class="container">
+    <h1 class="sub-title">My Portfolio</h1>
+    <div class="work-list">
+       <div class="work">
+        <h2>DCT and Quantization</h2>
+        <p>Quantized images using DCT, implemented image reconstruction, and calculated MSE for various step sizes in MATLAB.</p>
+    </div>
+    <div class="work">
+        <h2>Fibonacci Number Generator</h2>
+        <p>Debugged and optimized a Fibonacci generator in C++, resolving recursion issues and improving performance.</p>
+    </div>
+    <div class="work">
+        <h2>Code Optimization</h2>
+        <p>Created a Christmas song using minimal code, reducing byte size and improving code efficiency.</p>
+       </div> 
+    </div>
+    <a href="#" class="btn">see more</a>
+</div>
+</div>
+ <!--contact-->
+ <div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p>shaya.fakhr@gmail.com</p>
+                <p>(778)723-7425</p>
+                <p>linkdin</p>
+                <a href="images/myresume.pdf" download class="btn btn2">Download Cv</a>
+            </div>
+            <div class="contact-right"></div>
+            <form>
+                <input type="text" name ="Name" placeholder="Your Name" required>
+                <input type="eamil" name ="Email" placeholder="Your Email" required > 
+                <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                <button type="submit" class="btn btn2">Submit</button>
+            </form>
+
+        </div>
+    </div>
+<div class="copyright">
+    <p>Copyright Kevin. Made with by Easy Tutorials</p>
+</div>
+ </div>
+ 
+ 
+ <script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+ </script>  
+ <script>
+    
+ </script>
+</body>
